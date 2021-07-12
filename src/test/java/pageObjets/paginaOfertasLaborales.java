@@ -6,7 +6,6 @@ import utils.utilidades;
 public class paginaOfertasLaborales extends PageObject {
     utilidades utils;
 
-
     public void verOfertasLaborales() {
         utils.obtenerDatosOferta();
     }

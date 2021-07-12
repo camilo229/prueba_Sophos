@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 
 public class utilidades extends PageObject {
 
+
     public void obtenerDatosOferta() {
         int contador = 1;
 

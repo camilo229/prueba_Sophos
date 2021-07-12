@@ -17,6 +17,5 @@ public class paginaPrincipal extends PageObject {
 
     public void ingresarTrabajaConNosotros() throws InterruptedException {
         buttonTrabajaConNostros.click();
-
     }
 }

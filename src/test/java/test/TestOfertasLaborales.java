@@ -12,7 +12,6 @@ import steps.stepOfertasLaborales;
 
 public class TestOfertasLaborales {
 
-
     @Steps
     stepOfertasLaborales pasos;
     @Managed
