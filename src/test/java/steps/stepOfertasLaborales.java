@@ -1,6 +1,7 @@
 package steps;
 
 import net.thucydides.core.annotations.Step;
+import org.openqa.selenium.WebDriver;
 import pageObjets.paginaOfertasLaborales;
 import pageObjets.paginaPrincipal;
 
@@ -10,10 +11,10 @@ public class stepOfertasLaborales {
     paginaOfertasLaborales paginaOfertas;
 
     @Step
-    public void abrirPaginaSophos() {
+    public void abrirPaginaSophos(WebDriver driver) {
 
         pagina.open();
-
+        driver.navigate().refresh();
 
     }
 

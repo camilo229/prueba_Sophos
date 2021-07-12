@@ -14,14 +14,8 @@ public class paginaPrincipal extends PageObject {
     @FindBy(xpath = "//*[@id=\"mega-menu-item-1541\"]/a")
     WebElementFacade buttonTrabajaConNostros;
 
-    @FindBy(xpath = "//*[@class=\"sgpb-theme-2-overlay sgpb-popup-overlay-5998 sgpb-popup-overlay\"]")
-    WebElementFacade popup;
-
 
     public void ingresarTrabajaConNosotros() throws InterruptedException {
-        popup.isClickable();
-        popup.click();
-
         buttonTrabajaConNostros.click();
 
     }

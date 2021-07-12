@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>TestsMavenAvianca</artifactId>
+    <artifactId>PruebaSophos</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -81,5 +81,30 @@
             </plugin>
         </plugins>
     </build>
-
+    <plugin>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>3.0.0-M4</version>
+        <configuration>
+            <includes>
+                <include>**/*Test.java</include>
+                <include>**/Test*.java</include>
+                <include>**/*TestSuite.java</include>
+                <include>**/When*.java</include>
+            </includes>
+            <systemPropertyVariables>
+                <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
+            </systemPropertyVariables>
+            <parallel>classes</parallel>
+            <threadCount>${parallel.tests}</threadCount>
+            <forkCount>${parallel.tests}</forkCount>
+        </configuration>
+        <executions>
+            <execution>
+                <goals>
+                    <goal>integration-test</goal>
+                    <goal>verify</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
 </project>

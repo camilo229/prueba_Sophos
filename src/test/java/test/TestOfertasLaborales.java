@@ -10,7 +10,7 @@ import steps.stepOfertasLaborales;
 
 @RunWith(SerenityRunner.class)
 
-public class testOfertasLaborales {
+public class TestOfertasLaborales {
 
 
     @Steps
@@ -21,7 +21,8 @@ public class testOfertasLaborales {
     @Test
 
     public void verOfertasLaborales() throws InterruptedException {
-        pasos.abrirPaginaSophos();
+        pasos.abrirPaginaSophos(driver);
+
         pasos.trabajaConNosotros();
     }
 }
